@@ -1,25 +1,49 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0">
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
-
-    <prerequisites>
-        <maven>3.3.0</maven>
-    </prerequisites>
-
     <groupId>com.github.jcustenborder.maven.plugins</groupId>
     <artifactId>gh-settings-maven-plugin</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>maven-plugin</packaging>
     <name>kafka-connect-parent</name>
-    <inceptionYear>2017</inceptionYear>
-
     <url>https://github.com/jcustenborder/gh-settings-maven-plugin</url>
-
+    <inceptionYear>2017</inceptionYear>
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>https://api.github.com/licenses/apache-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>Jeremy Custenborder</name>
+            <email>jeremy@confluent.io</email>
+            <url>https://api.github.com/users/jcustenborder</url>
+            <roles>
+                <role>maintainer</role>
+            </roles>
+        </developer>
+    </developers>
+    <prerequisites>
+        <maven>3.3.0</maven>
+    </prerequisites>
+    <scm>
+        <connection>scm:git:https://github.com/jcustenborder/gh-settings-maven-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:jcustenborder/gh-settings-maven-plugin.git</developerConnection>
+        <url>https://api.github.com/repos/jcustenborder/gh-settings-maven-plugin</url>
+    </scm>
+    <issueManagement>
+        <system>github</system>
+        <url>https://api.github.com/repos/jcustenborder/gh-settings-maven-plugin/issues</url>
+    </issueManagement>
     <properties>
         <mockito.version>2.6.3</mockito.version>
-        <junit.version>5.0.0-M3</junit.version>
         <junit.surefire.plugin.version>1.0.0-M3</junit.surefire.plugin.version>
+        <junit.version>5.0.0-M3</junit.version>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.kohsuke</groupId>
@@ -44,7 +68,6 @@
             <version>3.3.1</version>
             <scope>provided</scope>
         </dependency>
-
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
@@ -70,11 +93,9 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.19.1</version>
                 <dependencies>
@@ -86,7 +107,6 @@
                 </dependencies>
             </plugin>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.0.2</version>
                 <configuration>
@@ -99,7 +119,6 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.5.1</version>
                 <inherited>true</inherited>
@@ -110,5 +129,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
